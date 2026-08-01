@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '直播-游戏卡片-关闭',
+      fastQuery: true,
       rules: {
         matches: '[vid="live_game_card_close"]',
       },

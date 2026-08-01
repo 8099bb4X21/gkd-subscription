@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: 'VIP会员开通弹窗-关闭',
+      fastQuery: true,
       rules: {
         matches:
           '@ViewGroup[clickable=true] <n ViewGroup > ViewGroup > [text*="首VIP歌曲，开通VIP"]',
