@@ -1,12 +1,17 @@
 name: build_release
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build_release:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
+    if: ${{ !startsWith(github.event.head_commit.message, 'chore: v') }}
     steps:
       - uses: actions/checkout@v6
 
