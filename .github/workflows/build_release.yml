@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
-    if: ${{ not(startsWith(github.event.head_commit.message, 'chore: v')) }}
+    if: "${{ !startsWith(github.event.head_commit.message, 'chore: v') }}"
     steps:
       - uses: actions/checkout@v6
 
