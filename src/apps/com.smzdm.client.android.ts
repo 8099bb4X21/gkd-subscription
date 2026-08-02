@@ -19,6 +19,7 @@ export default defineGkdApp({
       name: '首页Tab-未选生活时点击',
       fastQuery: true,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: {
         matches: '@[vid="tv_tab_lbs"][checked=false]',
       },
@@ -30,6 +31,7 @@ export default defineGkdApp({
       name: '生活频道-点美团外卖卡片',
       fastQuery: true,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: {
         matches:
           '[text="生活"][checked=true] <n [vid="cl_tab"] +n [vid="cl_root"] >n @ViewGroup[vid="layout_super_business"][clickable=true] > [vid="tv_title"][text="美团外卖"]',
