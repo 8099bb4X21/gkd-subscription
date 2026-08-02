@@ -16,28 +16,32 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '首页Tab-未选生活时点击',
+      name: '首页Tab-自动切生活+点美团外卖卡片',
       fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: {
-        matches: '@[vid="tv_tab_lbs"][checked=false]',
-      },
+      matchTime: 300000,
       activityIds: ['com.smzdm.client.android.app.HomeActivity'],
-      snapshotUrls: ['https://i.gkd.li/i/1785650392005'],
-    },
-    {
-      key: 2,
-      name: '生活频道-点美团外卖卡片',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: {
-        matches:
-          '[text="生活"][checked=true] <n [vid="cl_tab"] +n [vid="cl_root"] >n @ViewGroup[vid="layout_super_business"][clickable=true] > [vid="tv_title"][text="美团外卖"]',
-      },
-      activityIds: ['com.smzdm.client.android.app.HomeActivity'],
-      snapshotUrls: ['https://i.gkd.li/i/1785592880229'],
+      snapshotUrls: [
+        'https://i.gkd.li/i/1785650392005',
+        'https://i.gkd.li/i/1785592880229',
+      ],
+      rules: [
+        {
+          key: 0,
+          name: '未选生活时点击',
+          actionMaximum: 1,
+          resetMatch: 'app',
+          matches: '@[vid="tv_tab_lbs"][checked=false]',
+        },
+        {
+          key: 1,
+          name: '生活频道-点美团外卖卡片',
+          preKeys: [0],
+          actionMaximum: 1,
+          resetMatch: 'app',
+          matches:
+            '[text="生活"][checked=true] <n [vid="cl_tab"] +n [vid="cl_root"] >n @ViewGroup[vid="layout_super_business"][clickable=true] > [vid="tv_title"][text="美团外卖"]',
+        },
+      ],
     },
   ],
 });
