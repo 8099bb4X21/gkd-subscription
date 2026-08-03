@@ -1,0 +1,33 @@
+import { defineGkdApp } from '@gkd-kit/define';
+
+export default defineGkdApp({
+  id: 'com.sankuai.meituan',
+  name: '美团',
+  groups: [
+    {
+      key: 1,
+      name: '收银台-支付结果操作',
+      activityIds: ['com.meituan.android.hybridcashier.HybridCashierActivity'],
+      rules: [
+        {
+          key: 0,
+          name: '点击横幅提示',
+          matches:
+            '@Image[clickable=true] <2 * < * > * > [text$="即可完成"][name="android.widget.Button"]',
+        },
+        {
+          key: 1,
+          name: '完成',
+          matches:
+            '[vid="mil_container"] @[text="完成"][name="android.widget.Button"]',
+        },
+        {
+          key: 2,
+          name: '直接退出',
+          matches:
+            '[vid="mil_container"] @[text="直接退出"][name="android.widget.TextView"]',
+        },
+      ],
+    },
+  ],
+});
