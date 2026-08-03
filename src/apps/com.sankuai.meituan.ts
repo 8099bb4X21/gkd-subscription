@@ -29,5 +29,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '外卖平台-完成',
+      fastQuery: true,
+      rules: {
+        matches:
+          '@[text="完成"][name="android.widget.TextView"][clickable=true]',
+      },
+      activityIds: [
+        'com.sankuai.waimai.platform.machpro.container.WMMPActivity',
+      ],
+      snapshotUrls: ['https://i.gkd.li/i/1785668346548'],
+    },
   ],
 });
