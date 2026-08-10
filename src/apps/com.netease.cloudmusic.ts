@@ -27,5 +27,15 @@ export default defineGkdApp({
       activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
       snapshotUrls: ['https://i.gkd.li/i/1786288126314'],
     },
+    {
+      key: 2,
+      name: '升级弹窗-关闭',
+      fastQuery: true,
+      rules: {
+        matches: '@[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
+      },
+      activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
+      snapshotUrls: ['https://i.gkd.li/i/1786288092356'],
+    },
   ],
 });
