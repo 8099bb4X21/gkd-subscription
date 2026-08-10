@@ -17,5 +17,15 @@ export default defineGkdApp({
       ],
       snapshotUrls: ['https://i.gkd.li/i/1785504624547'],
     },
+    {
+      key: 1,
+      name: '听有声书即可领取弹窗-关闭',
+      fastQuery: true,
+      rules: {
+        matches: '@ImageView[clickable=true] - [text*="即可领取"]',
+      },
+      activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
+      snapshotUrls: ['https://i.gkd.li/i/1786288126314'],
+    },
   ],
 });
