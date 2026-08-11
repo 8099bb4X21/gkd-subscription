@@ -42,5 +42,15 @@ export default defineGkdApp({
       ],
       snapshotUrls: ['https://i.gkd.li/i/1785668346548'],
     },
+    {
+      key: 3,
+      name: '骑行订单-关闭先骑后付提示',
+      rules: {
+        matches:
+          '[text*="开通先骑后付"] +n @[name="android.view.View"] +n [id="payBottomPanel"] >n [text="开通并支付"]',
+      },
+      activityIds: ['com.meituan.msc.modules.container.MSCActivity'],
+      snapshotUrls: ['https://i.gkd.li/i/1786403684430'],
+    },
   ],
 });
