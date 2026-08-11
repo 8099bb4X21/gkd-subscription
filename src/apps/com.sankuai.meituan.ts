@@ -52,5 +52,23 @@ export default defineGkdApp({
       activityIds: ['com.meituan.msc.modules.container.MSCActivity'],
       snapshotUrls: ['https://i.gkd.li/i/1786403684430'],
     },
+    {
+      key: 4,
+      name: '骑行订单-仅支付车费',
+      rules: {
+        matches: '@[text="仅支付车费"]',
+      },
+      activityIds: ['com.meituan.msc.modules.container.MSCActivity'],
+      snapshotUrls: ['https://i.gkd.li/i/1786403694807'],
+    },
+    {
+      key: 5,
+      name: '先用后付-放弃使用普通支付',
+      rules: {
+        matches: '@[text*="使用普通支付"]',
+      },
+      activityIds: ['com.meituan.android.hybridcashier.HybridCashierActivity'],
+      snapshotUrls: ['https://i.gkd.li/i/1786403702142'],
+    },
   ],
 });
