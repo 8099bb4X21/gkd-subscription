@@ -37,5 +37,19 @@ export default defineGkdApp({
       activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
       snapshotUrls: ['https://i.gkd.li/i/1786288092356'],
     },
+    {
+      key: 3,
+      name: '支付方式选择-返回',
+      fastQuery: true,
+      rules: {
+        matches: '[text="微信支付"]',
+        action: 'back',
+        actionDelay: 500,
+      },
+      activityIds: [
+        'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+      ],
+      snapshotUrls: ['https://i.gkd.li/i/1786449283842'],
+    },
   ],
 });
