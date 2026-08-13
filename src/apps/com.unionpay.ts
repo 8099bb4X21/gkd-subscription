@@ -18,5 +18,24 @@ export default defineGkdApp({
       ],
       snapshotUrls: ['https://i.gkd.li/i/1786187353911'],
     },
+    {
+      key: 1,
+      name: '开屏广告-跳过-fastQuery',
+      fastQuery: true,
+      rules: {
+        matches: '@[text^="跳过"]',
+      },
+      activityIds: ['com.unionpay.activity.UPActivityMain'],
+      snapshotUrls: ['https://i.gkd.li/i/1786579141860'],
+    },
+    {
+      key: 2,
+      name: '开屏广告-跳过-无fastQuery',
+      rules: {
+        matches: '@[text^="跳过"]',
+      },
+      activityIds: ['com.unionpay.activity.UPActivityMain'],
+      snapshotUrls: ['https://i.gkd.li/i/1786579141860'],
+    },
   ],
 });
