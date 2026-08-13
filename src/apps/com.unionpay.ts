@@ -20,17 +20,9 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '开屏广告-跳过-fastQuery',
-      fastQuery: true,
-      rules: {
-        matches: '@[text^="跳过"]',
-      },
-      activityIds: ['com.unionpay.activity.UPActivityMain'],
-      snapshotUrls: ['https://i.gkd.li/i/1786579141860'],
-    },
-    {
-      key: 2,
-      name: '开屏广告-跳过-无fastQuery',
+      name: '开屏广告-跳过',
+      matchTime: 10000,
+      resetMatch: 'app',
       rules: {
         matches: '@[text^="跳过"]',
       },
