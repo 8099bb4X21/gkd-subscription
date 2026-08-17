@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '收银台-支付结果操作',
+      fastQuery: true,
       matchTime: 10000,
       activityIds: ['com.meituan.android.hybridcashier.HybridCashierActivity'],
       rules: [
@@ -46,6 +47,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '骑行订单-关闭先骑后付提示',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'activity',
@@ -59,6 +61,7 @@ export default defineGkdApp({
     {
       key: 4,
       name: '骑行订单-仅支付车费',
+      fastQuery: true,
       matchTime: 10000,
       rules: {
         matches: '@[text="仅支付车费"]',
@@ -69,6 +72,7 @@ export default defineGkdApp({
     {
       key: 5,
       name: '先用后付-放弃使用普通支付',
+      fastQuery: true,
       matchTime: 10000,
       rules: {
         matches: '@[text*="使用普通支付"]',
