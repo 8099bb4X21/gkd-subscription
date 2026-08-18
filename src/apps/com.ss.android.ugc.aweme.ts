@@ -10,7 +10,7 @@ export default defineGkdApp({
       fastQuery: true,
       rules: {
         matches:
-          '@View[clickable=true][width<=101][height<=101] <<n [id="m.l.live.plugin:id/lynx_game_promote_card_container"]',
+          '@View[clickable=true][width<=101][height<=101][top<500] +n [clickable=true] > [id="m.l.live.plugin:id/download_component_bg"]',
         action: 'click',
       },
       activityIds: ['com.ss.android.ugc.aweme.live.LivePlayActivity'],
