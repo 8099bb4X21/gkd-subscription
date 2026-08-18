@@ -12,8 +12,9 @@ export default defineGkdApp({
       rules: [
         {
           matches: "[text*='即刻联网']",
+          actionCd: 10000,
           position: {
-            left: 'width/2',
+            x: 'screenWidth * 4 / 5',
             top: 'height + 100',
           },
         },
