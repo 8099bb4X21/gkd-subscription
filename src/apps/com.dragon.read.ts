@@ -13,6 +13,7 @@ export default defineGkdApp({
         {
           matches: "[text*='即刻联网']",
           actionCd: 10000,
+          actionDelay: 200,
           position: {
             x: 'screenWidth * 4 / 5',
             top: 'height + 100',
