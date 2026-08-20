@@ -47,8 +47,6 @@ export default defineGkdApp({
     {
       key: 3,
       name: '骑行订单-关闭先骑后付提示',
-      fastQuery: true,
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'activity',
       rules: {
@@ -61,8 +59,6 @@ export default defineGkdApp({
     {
       key: 4,
       name: '骑行订单-仅支付车费',
-      fastQuery: true,
-      matchTime: 10000,
       rules: {
         matches: '@[text="仅支付车费"]',
       },
