@@ -12,8 +12,7 @@ export default defineGkdApp({
       rules: [
         {
           matches: "[text*='即刻联网']",
-          actionCd: 10000,
-          actionDelay: 200,
+          actionCd: 20000,
           position: {
             x: 'screenWidth * 4 / 5',
             top: 'height + 100',
@@ -21,6 +20,18 @@ export default defineGkdApp({
         },
       ],
       snapshotUrls: ['https://i.gkd.li/i/1786967226174'],
+    },
+    {
+      key: 1,
+      name: '阅读页-我要参与广告关闭',
+      fastQuery: true,
+      rules: {
+        matches:
+          '@[name="android.widget.ImageView"][width<100][height<100][visibleToUser=true] <n * >(3) [text="我要参与"]',
+        actionCd: 120000,
+      },
+      activityIds: ['com.dragon.read.reader.ui.ReaderActivity'],
+      snapshotUrls: ['https://i.gkd.li/i/1787187806280'],
     },
   ],
 });
