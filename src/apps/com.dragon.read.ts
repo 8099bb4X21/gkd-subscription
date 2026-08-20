@@ -11,7 +11,7 @@ export default defineGkdApp({
       activityIds: ['com.dragon.read.reader.ui.ReaderActivity'],
       rules: [
         {
-          matches: "[text*='即刻联网']",
+          matches: "[text*='即刻联网'][visibleToUser=true]",
           actionCd: 20000,
           position: {
             x: 'screenWidth * 4 / 5',
