@@ -27,7 +27,7 @@ export default defineGkdApp({
       fastQuery: true,
       rules: {
         matches:
-          '@[name="android.widget.ImageView"][width<100][height<100][visibleToUser=true] <n * >(3) [text="我要参与"]',
+          '@[name="android.widget.ImageView"][width<100][height<100][visibleToUser=true] <n * >(3) [text="我要参与" || text="立即前往"]',
         actionCd: 120000,
       },
       activityIds: ['com.dragon.read.reader.ui.ReaderActivity'],
